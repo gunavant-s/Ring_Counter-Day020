@@ -27,8 +27,8 @@ module ring_counter(input clk,
     always @(posedge clk or posedge reset)
     begin
         if(reset)
-           Q <= 4'b0;
-        else if(clk) 
+           Q <= 4'b1;
+        else 
             Q = {Q[2:0],Q[3]};
     end
             
